@@ -1,21 +1,37 @@
 <div id="login">
-    <div class="logo-image">
-        <img width="450px" title="CallCaribe INC" alt="CallCaribe INC" src="./images/callcaribe.png">
+    <div class="logo-image" style="margin-top: 10px">
+        <img width="100px" title="CallCaribe INC" alt="CallCaribe INC" src="./images/callcaribe-logo.png">
     </div>
-    <h2 class="form-heading" style="color:white">Bienvenido al PinFree de CallCaribe INC.</h2>
-    <div class="app-cam">
-        <form ng-submit="login()">
-            <div ng-show="invalidLogin" class="alert alert-danger">Usuario o Contraseña Incorrecto</div>
-            <input type="text" class="text" placeholder="Username" ng-model="credentials.username" ng-required="true"/>
-            <input type="password" placeholder="Password" ng-model="credentials.password" ng-required="true"/>
+    <h2 class="form-heading" style="color:white">Registrarse</h2>
+    <div class="app-cam" style="margin:10px auto auto">
+        <form ng-submit="register()">
+<!--             <div ng-show="invalidLogin" class="alert alert-danger">Usuario ya existe</div>
+ -->            
+            <input type="text" class="text" placeholder="Nombre" ng-model="credentials.name" ng-required="true"/>
+            <input type="text" class="text" placeholder="Email" ng-model="credentials.email" ng-required="true"/>
+            <input type="text" class="text" placeholder="Teléfono" ng-model="credentials.phone" ng-required="true"/>
+            <input type="text" class="text" placeholder="Usuario" ng-model="credentials.user" ng-required="true"/>
+            <input type="password" placeholder="Contraseña" ng-model="credentials.password" ng-required="true"/>
+            <input type="password" placeholder="Confirmar Contraseña" ng-model="credentials.password_confirmation" ng-required="true"/>
             <div class="submit"><input type="submit" ng-value="buttonText"></div>
-            <ul class="new">
-                <li class="new_left"><p><a ui-sref="forgot" style="color:white">Olvido su password ?</a></p></li>
-                <div class="clearfix"></div>
-            </ul>
         </form>
     </div>
-    <div class="copy_layout login">
+    <div class="foot" style="margin:10px auto auto">
         <p style="color:white">Design by <a style="color:white" href="http://carmasoluciones.com/" target="_blank">Carmasoluciones</a> </p>
     </div>
 </div>
+<style>
+
+.logo-image img{
+    display: block;
+    margin:auto;
+}
+
+.foot{
+    background:none;
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    width: 100%;
+}
+</style>

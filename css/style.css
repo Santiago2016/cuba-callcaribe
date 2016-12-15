@@ -96,6 +96,14 @@ body a{
 .label.label-info {
   background-color:#ef553a;
 }
+.btn-success {
+  background-color: rgb(6, 217, 149) !important;
+  border-color: none;
+}
+
+.btn-success:hover{
+    background-color: rgb(1, 200, 136) !important;
+}
 .label {
   padding: 4px 6px;
   border: none;
@@ -2064,9 +2072,7 @@ h2.form-heading {
   display: inline-block;
   width: 100%;
 }
-#login{
-  min-height:850px;
-}
+
 .app-cam {
   width:22%;
   margin:3em auto auto auto;
@@ -2720,4 +2726,6 @@ span.btn_6{
 span.btn_7{
   font-size: 64%;
 }
+
+
 }

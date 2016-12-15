@@ -26,7 +26,14 @@ angular.module('asterisk.admin.controllers', ['ab-base64']).controller('LoginCon
             $scope.buttonText = "Login";
         });
     }
-}]).controller('ForgotController', ['$scope', '$state', '$http', function ($scope, $state, $http) {
+}]).controller('RegistrationController',['$scope','$state','$http',function($scope,$state,$http){
+    $scope.register = function(){
+        console.log($scope.credentials)
+    }
+}])
+
+
+.controller('ForgotController', ['$scope', '$state', '$http', function ($scope, $state, $http) {
     $scope.buttonText = "Aceptar";
     $scope.forgot = function () {
         $http.post('http://agents.callcaribe.com/Asterisk/web/app_dev.php/api/forgot', {
