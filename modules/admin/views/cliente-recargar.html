@@ -1,0 +1,34 @@
+<div class="bs-example1" data-example-id="contextual-table">
+    <div class="row">
+        <div class="col-md-12">
+            <form name="tienda-recargar-Form" ng-submit="recargar()" class="form-horizontal" novalidate role="form">
+                <div class="form-group">
+                    <label for="tarjeta" class="col-md-4">Numero de la tarjeta: </label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control1" id="tarjeta" placeholder="tarjeta de credito" ng-model="tarjeta">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="codigo" class="col-md-4">Codigo de la tarjeta: </label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control1" id="codigo" placeholder="codigo de la tarjeta de credito" ng-model="codigo">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="importe" class="col-md-4">Cantidad con que se recargara la cuenta: </label>
+                    <div class="col-md-5">
+                        <input type="text" class="form-control1" id="importe" placeholder="importe" ng-model="importe">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-success">Recargar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

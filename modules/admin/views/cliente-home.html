@@ -1,0 +1,64 @@
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="top1 navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Bienvenido {{user.username}}</a>
+        </div>
+        <!-- /.navbar-header -->
+        <ul class="nav navbar-nav navbar-right">
+
+        </ul>
+        <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
+        </form>
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href ng-click="logout()"><i class="fa fa-sign-out fa-fw nav_icon"></i>Logout</a>
+                    </li>
+                    <li>
+                        <a ui-sref="password"><i class="fa fa-plus-square-o fa-fw nav_icon"></i>Update password</a>
+                    </li>
+                    <li>
+                        <a ui-sref="cliente.perfil"><i class="fa fa-plus-square-o fa-fw nav_icon"></i>Mi Perfil</a>
+                    </li>
+                    <li>
+                        <a ui-sref="cliente.llamadas"><i class="fa fa-plus-square-o fa-fw nav_icon"></i>Mis llamadas</a>
+                    </li>
+                    <li>
+                        <a ui-sref="cliente.recargas"><i class="fa fa-list nav_icon"></i>Mis recargas</a>
+                    </li>
+                    <li>
+                        <a ui-sref="cliente.recarga"><i class="fa fa-list nav_icon"></i>Recargar</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+    <div id="page-wrapper">
+        <div class="graphs">
+
+            <div class="content_bottom">
+                <div class="col-md-12 span_3">
+                    <div ui-view></div>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+            <div class="copy">
+                <p>Design by <a href="http://carmasoluciones.com/" target="_blank">Carmasoluciones</a> </p>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+</div>
+<!-- Bootstrap Core JavaScript -->

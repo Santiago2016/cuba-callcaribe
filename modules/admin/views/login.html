@@ -1,0 +1,21 @@
+<div id="login">
+    <div class="logo-image">
+        <img width="450px" title="CallCaribe INC" alt="CallCaribe INC" src="./images/callcaribe.png">
+    </div>
+    <h2 class="form-heading" style="color:white">Bienvenido al PinFree de CallCaribe INC.</h2>
+    <div class="app-cam">
+        <form ng-submit="login()">
+            <div ng-show="invalidLogin" class="alert alert-danger">Usuario o Contraseña Incorrecto</div>
+            <input type="text" class="text" placeholder="Username" ng-model="credentials.username" ng-required="true"/>
+            <input type="password" placeholder="Password" ng-model="credentials.password" ng-required="true"/>
+            <div class="submit"><input type="submit" ng-value="buttonText"></div>
+            <ul class="new">
+                <li class="new_left"><p><a ui-sref="forgot" style="color:white">Olvido su password ?</a></p></li>
+                <div class="clearfix"></div>
+            </ul>
+        </form>
+    </div>
+    <div class="copy_layout login">
+        <p style="color:white">Design by <a style="color:white" href="http://carmasoluciones.com/" target="_blank">Carmasoluciones</a> </p>
+    </div>
+</div>

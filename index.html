@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="asterisk">
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+        <title>CallCaribe Inc - Agent Portal</title>
+        <link href="css/app.css" rel='stylesheet' type='text/css'/>
+        <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <!-- Graph CSS -->
+        <link href="css/lines.css" rel='stylesheet' type='text/css' />
+        <link href="css/font-awesome.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+        <!---//webfonts--->
+        <!-- Nav CSS -->
+        <link href="css/custom.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/clndr.css" type="text/css" />
+        <link href="css/jqvmap.css" rel='stylesheet' type='text/css' />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+        <style>
+            body {
+                font-family: Ubuntu;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div style="width: 100%; height: 100%" ng-cloak>
+            <div ui-view style="height:100%">Loading . . .</div>
+        </div>
+    </body>
+
+    <!-- build:js app/built/app.min.js -->
+    <script src="lib/angular/angular.js"></script>
+
+    <script src="lib/angular-ui-router/angular-ui-router.min.js"></script>
+    <script src="lib/angular/angular-resource.js"></script>
+    <script src="lib/angular/angular-sanitize.js"></script>
+    <script src="lib/angular/angular-animate.js"></script>
+    <script src="lib/angular/angular-cookies.js"></script>
+    <script src="lib/angular/angular-translate.js"></script>
+    <script src="bower_components/angular-utf8-base64/angular-utf8-base64.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/services.js"></script>
+
+    <script src="modules/admin/adminModule.js"></script>
+    <script src="modules/admin/js/controllers.js"></script>
+    <script src="modules/admin/js/filters.js"></script>
+    <script src="modules/admin/js/directives.js"></script>
+    <script src="modules/admin/js/services.js"></script>
+
+    <!-- endbuild -->
+</html>

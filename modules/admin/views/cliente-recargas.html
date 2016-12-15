@@ -1,0 +1,18 @@
+<div class="bs-example1" data-example-id="contextual-table">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID de la cuenta</th>
+            <th>Cantidad recargada</th>
+            <th>Fecha y Hora</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr ng-repeat="recarga in response.recargas">
+            <td>{{recarga.accountid}}</td>
+            <td>{{recarga.amount}}</td>
+            <td>{{recarga.date}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

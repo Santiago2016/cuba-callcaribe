@@ -1,0 +1,55 @@
+<div class="bs-example1" data-example-id="contextual-table">
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <form name="perfil" ng-submit="updatePerfil()" class="form-horizontal" novalidate role="form">
+                <div class="col-xs-5">
+                    <p>Personal details below</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control1" placeholder="Nombre(s)" autofocus=""
+                               ng-model="user.nombre" name="nombre" ng-required="true" ng-maxlength="80" ng-minlength="5">
+                        <span class="error-message" ng-show="perfil.nombre.$dirty && perfil.nombre.$error.required">
+                            Este campo es obligatorio</span>
+                        <span class="error-message" ng-show="perfil.nombre.$dirty && perfil.nombre.$error.minlength">
+                            Texto muy largo</span>
+                        <span class="error-message" ng-show="perfil.nombre.$dirty && perfil.nombre.$error.maxlength">
+                            Texto muy largo</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control1" placeholder="Email" autofocus="" ng-model="user.email" name="email"
+                        ng-required="true" ng-minlength="5" ng-maxlength="120">
+                    </div>
+                    <span class="error-message" ng-show="perfil.email.$dirty && perfil.email.$error.required">
+                            Este campo es obligatorio</span>
+                    <span class="error-message" ng-show="perfil.email.$dirty && perfil.email.$error.minlength">
+                            Debe introducir un email mas largo</span>
+                    <span class="error-message" ng-show="perfil.email.$dirty && perfil.email.$error.maxlength">
+                            Ha sobrepasado el limite de caracteres</span>
+                </div>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-5">
+                    <p>Account details below</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control1" placeholder="Telefono" autofocus=""
+                               ng-model="user.telefono" ng-required="true" name="telefono">
+                        <span class="error-message" ng-show="perfil.telefono.$dirty && perfil.username.$error.required">
+                            Este campo es obligatorio</span>
+                    </div>
+                    <p> Account details below</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control1" placeholder="User Name" autofocus=""
+                               ng-model="user.username" name="username" ng-required="true">
+                        <span class="error-message" ng-show="perfil.username.$dirty && perfil.username.$error.required">
+                            Este campo es obligatorio</span>
+                    </div>
+                </div>
+                <div class="col-xs-5"></div>
+                <div class="form-group">
+                    <div class="col-xs-2">
+                        <button class="btn btn-lg btn-success1 btn-block" type="submit" ng-disabled="perfil.$invalid">Submit</button>
+                    </div>
+                </div>
+                <div class="col-xs-5"></div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="bs-example1" data-example-id="contextual-table">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Remitente</th>
+            <th>Receptor</th>
+            <th>Tiempo</th>
+            <th>Fecha y Hora</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="llamada in response.llamadas">
+            <td>{{llamada.remitente}}</td>
+            <td>{{llamada.receptor}}</td>
+            <td>{{llamada.tiempo}}</td>
+            <td>{{llamada.date}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
