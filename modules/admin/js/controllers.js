@@ -29,21 +29,42 @@ angular.module('asterisk.admin.controllers', ['ab-base64'])
 
 
 .controller('RegistrationController',['$scope','$state','$http',function($scope,$state,$http){
+    function randomPassword(length) {
+        var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
+        var pass = "";
+        for (var x = 0; x < length; x++) {
+            var i = Math.floor(Math.random() * chars.length);
+            pass += chars.charAt(i);
+        }
+        return pass;
+    }
+
+
+    function sendPassword(phone,passwd){
+        $http.post('http://a2billing.callcaribe.com:8080/sendSMS',{
+            message:"Gracias por registrarse, su contraseña es "+passwd+"",
+            to: "+1" + phone
+        },{"headers":{'Content-Type':'application/json;charset=UTF-8'}}).then(function(sms){
+            $state.go('login');
+        })
+    }
+
     $scope.register = function(){
         if ($scope.credentials.password != $scope.credentials.password_confirmation){
             $scope.passwordIncorrect = true;
         }
-        else{
-             $http.post('Asterisk/web/app_dev.php/api/users',{
+        else {
+            var passwd = randomPassword(8)
+            $http.post('Asterisk/web/app_dev.php/api/users',{
                 user: 35,
                 username: $scope.credentials.user,
-                password: $scope.credentials.password,
+                password: randomPassword(8),
                 role: 'ROLE_CLIENTE',
                 nombre: $scope.credentials.name,
                 email: $scope.credentials.email,
                 telefono: $scope.credentials.phone
             }).then(function (response) {
-                    $state.go('login');
+                sendPassword($scope.credentials.phone,passwd)
             }, function (err) {
                 $scope.err = err;
             });

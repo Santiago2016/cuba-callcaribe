@@ -5,16 +5,18 @@
     <h2 class="form-heading" style="color:white">Registrarse</h2>
     <div class="app-cam" style="margin:10px auto auto">
         <form ng-submit="register()">
-<!--             <div ng-show="invalidLogin" class="alert alert-danger">Usuario ya existe</div>
- -->            
+          
             <input type="text" class="text" placeholder="Nombre" ng-model="credentials.name" ng-required="true"/>
             <input type="text" class="text" placeholder="Email" ng-model="credentials.email" ng-required="true"/>
             <input type="text" class="text" placeholder="Teléfono" ng-model="credentials.phone" ng-required="true"/>
             <input type="text" class="text" placeholder="Usuario" ng-model="credentials.user" ng-required="true"/>
-            <input type="password" placeholder="Contraseña" ng-model="credentials.password" ng-required="true"/>
-            <input type="password" placeholder="Confirmar Contraseña" ng-model="credentials.password_confirmation" ng-required="true"/>
+<!--             <input type="password" placeholder="Contraseña" ng-model="credentials.password" ng-required="true"/>
+            <input type="password" placeholder="Confirmar Contraseña" ng-model="credentials.password_confirmation" ng-required="true"/> -->
             <div class="submit"><input type="submit" value="ENVIAR"></div>
         </form>
+        <div ng-show="registered" class="alert alert-success">
+            Gracias por registrarte en Nuestro sitio, recibira su contraseña de acceso por sms con la cual podra disfrutar de todos nuestros servicios
+        </div>
     </div>
     <div class="foot" style="margin:10px auto auto">
         <p style="color:white">Design by <a style="color:white" href="http://carmasoluciones.com/" target="_blank">Carmasoluciones</a> </p>
