@@ -31,5 +31,5 @@ angular.module('asterisk.admin.services', []).service('popupService',['$window',
 }]);
 
 
-angular.module('asterisk.admin.services').value('AUTH_ENDPOINT','http://agents.callcaribe.com/Asterisk/web/app_dev.php/api/login');
-angular.module('asterisk.admin.services').value('LOGOUT_ENDPOINT','http://agents.callcaribe.com/Asterisk/web/app_dev.php/api/logout');
+angular.module('asterisk.admin.services').value('AUTH_ENDPOINT','Asterisk/web/app_dev.php/api/login');
+angular.module('asterisk.admin.services').value('LOGOUT_ENDPOINT','Asterisk/web/app_dev.php/api/logout');

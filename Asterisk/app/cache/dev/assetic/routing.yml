@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: '/mnt/c/Users/ndcg9/Documents/proyectos argelio/agentsCallcaribe/app/Asterisk/app/config/routing_dev.yml'

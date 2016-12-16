@@ -1,0 +1,8 @@
+api_rest:
+    resource: "@ApiRestBundle/Resources/config/routing.yml"
+    prefix:   /
+
+mvms_api:
+    type:     rest
+    prefix:   /api
+    resource: "@ApiRestBundle/Resources/config/api-routing.yml"

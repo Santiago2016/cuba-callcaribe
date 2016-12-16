@@ -1,0 +1,36 @@
+api_rest_users:
+    type: rest
+    resource: "@ApiRestBundle/Controller/UsersController.php"
+    name_prefix: api_users_
+
+#acme_demo_user_new:
+#    path:  /users
+#    defaults: { _controller: AcmeDemoBundle:Articles:new, _format: ~ }
+#    requirements:
+#        _method: POST
+#
+#acme_demo_user_edit:
+#    path:  /users/{id}
+#    defaults: { _controller: AcmeDemoBundle:Articles:edit, _format: ~ }
+#    requirements:
+#        _method: PUT
+#
+#acme_demo_user_delete:
+#    path:  /users/{id}
+#    defaults: { _controller: AcmeDemoBundle:Articles:remove, _format: ~ }
+#    requirements:
+#        _method: DELETE
+#
+#acme_demo_user_all:
+#    path: /users
+#    defaults: { _controller: AcmeDemoBundle:Articles:all, _format: ~ }
+#    requirements:
+#        _method: GET
+#
+#acme_demo_user_get:
+#    path:  /users/{id}
+#    defaults: { _controller: AcmeDemoBundle:Articles:get, _format: ~ }
+#    requirements:
+#        _method: GET
+#        id: "\d+"
+

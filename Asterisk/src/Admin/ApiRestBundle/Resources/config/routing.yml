@@ -1,0 +1,89 @@
+api_rest_login:
+    path: api/login
+    defaults: { _controller: ApiRestBundle:Login:loginUser, _fotmat: ~}
+    requirements:
+         _method: POST
+         
+api_rest_logout:
+    path: /api/logout
+    defaults: { _controller: ApiRestBundle:Login:logoutUser, _fotmat: ~}
+    requirements:
+         _method: POST
+         
+api_rest_forgot:
+    path: /api/forgot
+    defaults: { _controller: ApiRestBundle:Login:forgot, _fotmat: ~}
+    requirements:
+         _method: POST  
+         
+api_rest_user_update:
+    path: /api/user/update
+    defaults: { _controller: ApiRestBundle:Login:updateUser, _fotmat: ~}
+    requirements:
+         _method: POST  
+         
+api_rest_password_update:
+    path: /api/password/update
+    defaults: { _controller: ApiRestBundle:Login:updatePassword, _fotmat: ~}
+    requirements:
+         _method: POST           
+         
+api_rest_admin_recargas:
+    path: /api/admin/recargas
+    defaults: { _controller: ApiRestBundle:Admin:recargas, _format: ~}
+    requirements:
+        _method: POST
+        
+api_rest_admin_recargar:
+    path: /api/admin/recargar
+    defaults: { _controller: ApiRestBundle:Admin:recargar, _format: ~}
+    requirements:
+        _method: POST
+        
+api_rest_admin_llamadas:
+    path: /api/admin/llamadas
+    defaults: { _controller: ApiRestBundle:Admin:llamadas, _format: ~}
+    requirements:
+        _method: POST
+        
+api_rest_admin_tiendas:
+    path: /api/admin/tiendas
+    defaults: { _controller: ApiRestBundle:Admin:tiendas, _format: ~}
+    requirements:
+        _method: POST        
+        
+api_rest_tienda_recargas:
+    path: /api/tienda/recargas
+    defaults: { _controller: ApiRestBundle:Tienda:recargas, _format: ~}
+    requirements:
+        _method: POST
+        
+api_rest_tienda_recargar:
+    path: /api/tienda/recargar
+    defaults: { _controller: ApiRestBundle:Tienda:recargar, _format: ~}
+    requirements:
+        _method: POST       
+        
+api_rest_tienda_llamadas:
+    path: /api/tienda/llamadas
+    defaults: { _controller: ApiRestBundle:Tienda:llamadas, _format: ~}
+    requirements:
+        _method: POST
+        
+api_rest_tienda_clientes:
+    path: /api/tienda/clientes
+    defaults: { _controller: ApiRestBundle:Tienda:clientes, _format: ~}
+    requirements:
+        _method: POST        
+        
+api_rest_cliente_recargas:
+    path: /api/cliente/recargas
+    defaults: { _controller: ApiRestBundle:Cliente:recargas, _format: ~}
+    requirements:
+        _method: POST
+        
+api_rest_cliente_llamdas:
+    path: /api/cliente/llamadas
+    defaults: { _controller: ApiRestBundle:CLiente:llamadas, _format: ~}
+    requirements:
+        _method: POST        

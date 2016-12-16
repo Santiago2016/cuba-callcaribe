@@ -1,0 +1,2 @@
+deny from all
+Header set Access-Control-Allow-Origin "http://localhost:8000"
